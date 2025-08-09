@@ -1,0 +1,7 @@
+west:
+  command: c:\Projects\Github\nordic_workspace\.venv\Scripts\west build -b nrf7002dk/nrf5340/cpuapp
+    c:\Projects\Github\nordic_workspace\LoRa -p --build-dir c:\Projects\Github\nordic_workspace\LoRa\build\nrf7002dk\nrf5340\cpuapp
+    -- -DBOARD_ROOT=c:\Projects\Github\nordic_workspace\external\zephyr -DCONFIG_DEBUG_OPTIMIZATIONS=y
+    -DCONFIG_DEBUG_THREAD_INFO=y -DEXTRA_DTC_OVERLAY_FILE=c:\Projects\Github\nordic_workspace\LoRa\boards\nrf7002.overlay;
+  topdir: c:\Projects\Github\nordic_workspace
+  version: 1.3.0

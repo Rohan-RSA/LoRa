@@ -1,0 +1,2 @@
+"nrf":"C:/Projects/Github/nordic_workspace/external/nrf":"C:/Projects/Github/nordic_workspace/external/nrf/sysbuild"
+"mcuboot":"C:/Projects/Github/nordic_workspace/external/bootloader/mcuboot":"C:/Projects/Github/nordic_workspace/external/bootloader/mcuboot/boot/zephyr/sysbuild"
