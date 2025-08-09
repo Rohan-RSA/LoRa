@@ -32,6 +32,7 @@ int main(void)
 		LOG_ERR("%s Device not ready", lora_dev->name);
 		return 0;
 	}
+	LOG_INF("LoRa device %s is ready", lora_dev->name);
 
 	config.frequency = 865100000;
 	config.bandwidth = BW_125_KHZ;
@@ -48,6 +49,8 @@ int main(void)
 		LOG_ERR("LoRa config failed");
 		return 0;
 	}
+	LOG_INF("LoRa configured with frequency %u Hz, bandwidth %d, datarate %d",
+		config.frequency, config.bandwidth, config.datarate);
 
 	while (1) {
 		ret = lora_send(lora_dev, data, MAX_DATA_LEN);

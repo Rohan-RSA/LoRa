@@ -1435,19 +1435,20 @@ wifi-max-tx-pwr-5g-high-mcs7 = <13>;
 };
 # 0 "<command-line>" 2
 # 1 "c:/Projects/Github/nordic_workspace/LoRa/boards/nrf7002.overlay" 1
-&spi4 {
+&spi2 {
  compatible = "nordic,nrf-spim";
  status = "okay";
- cs-gpios = <&gpio0 11 (1 << 0)>;
- pinctrl-0 = <&spi4_default>;
- pinctrl-1 = <&spi4_sleep>;
+ cs-gpios = <&gpio1 1 (1 << 0)>;
+ pinctrl-0 = <&spi2_default>;
+ pinctrl-1 = <&spi2_sleep>;
  pinctrl-names = "default", "sleep";
- lora0: sx1262@1 {
+
+ lora0: sx1262@0 {
   compatible = "semtech,sx1262";
   reg = <0>;
-  reset-gpios = <&gpio0 2 (1 << 0)>;
-  dio-gpios = <&gpio0 28 ((1 << 5) | (0 << 0))>;
-  power-amplifier-output = "pa-boost";
+  reset-gpios = <&gpio1 10 (1 << 0)>;
+  dio1-gpios = <&gpio1 0 ((1 << 5) | (0 << 0))>;
+        busy-gpios = <&gpio1 11 (0 << 0)>;
   spi-max-frequency = <125000>;
  };
 };

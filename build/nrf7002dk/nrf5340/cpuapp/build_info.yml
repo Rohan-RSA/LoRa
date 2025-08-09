@@ -1,4 +1,6 @@
 cmake:
+  application:
+    source-dir: C:/Projects/Github/nordic_workspace/external/zephyr/share/sysbuild
   board:
     name: nrf7002dk
     path:
@@ -15,6 +17,7 @@ cmake:
      - C:/Projects/Github/nordic_workspace/LoRa/build/nrf7002dk/nrf5340/cpuapp/_sysbuild/empty.conf
     user-files:
      - C:/Projects/Github/nordic_workspace/LoRa/build/nrf7002dk/nrf5340/cpuapp/_sysbuild/empty.conf
+  sysbuild: true
 version: 0.1.0
 west:
   command: c:\Projects\Github\nordic_workspace\.venv\Scripts\west build -b nrf7002dk/nrf5340/cpuapp c:\Projects\Github\nordic_workspace\LoRa -p --build-dir c:\Projects\Github\nordic_workspace\LoRa\build\nrf7002dk\nrf5340\cpuapp -- -DBOARD_ROOT=c:\Projects\Github\nordic_workspace\external\zephyr -DCONFIG_DEBUG_OPTIMIZATIONS=y -DCONFIG_DEBUG_THREAD_INFO=y -DEXTRA_DTC_OVERLAY_FILE=c:\Projects\Github\nordic_workspace\LoRa\boards\nrf7002.overlay;

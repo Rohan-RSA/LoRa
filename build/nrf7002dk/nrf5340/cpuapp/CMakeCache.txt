@@ -93,8 +93,20 @@ WEST_PYTHON:UNINITIALIZED=c:/Projects/Github/nordic_workspace/.venv/Scripts/pyth
 //Zephyr base
 ZEPHYR_BASE:PATH=C:/Projects/Github/nordic_workspace/external/zephyr
 
+//Path to merged image in Intel Hex format
+ZEPHYR_RUNNER_CONFIG_KERNEL_HEX:STRING=
+
 //The directory containing a CMake configuration file for Zephyr.
 Zephyr_DIR:PATH=C:/Projects/Github/nordic_workspace/external/zephyr/share/zephyr-package/cmake
+
+//Value Computed by CMake
+sysbuild_BINARY_DIR:STATIC=C:/Projects/Github/nordic_workspace/LoRa/build/nrf7002dk/nrf5340/cpuapp/_sysbuild
+
+//Value Computed by CMake
+sysbuild_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+sysbuild_SOURCE_DIR:STATIC=C:/Projects/Github/nordic_workspace/external/zephyr/share/sysbuild/template
 
 //Value Computed by CMake
 sysbuild_toplevel_BINARY_DIR:STATIC=C:/Projects/Github/nordic_workspace/LoRa/build/nrf7002dk/nrf5340/cpuapp
@@ -163,6 +175,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[c:/Projects/Github/nordic_workspa
 HWM:INTERNAL=v2
 //Zephyr hardware model
 HWMv2:INTERNAL=True
+//nRF Connect SDK partition managere controlled hex file
+LoRa_NCS_RUNNER_HEX:INTERNAL=C:/Projects/Github/nordic_workspace/LoRa/build/nrf7002dk/nrf5340/cpuapp/merged.hex
 //West
 WEST:INTERNAL=c:/Projects/Github/nordic_workspace/.venv/Scripts/python.exe;-m;west
 //Compiler reason failure

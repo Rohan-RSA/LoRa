@@ -1,0 +1,29 @@
+&spi4 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	cs-gpios = <&gpio1 1 GPIO_ACTIVE_LOW>;
+	pinctrl-0 = <&spi4_default>;
+	pinctrl-1 = <&spi4_sleep>;
+	pinctrl-names = "default", "sleep";
+
+	lora0: sx1262@0 {
+		compatible = "semtech,sx1262";
+		reg = <0>;
+		reset-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+		dio1-gpios = <&gpio1 0 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
+        busy-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+		tx-enable-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+		rx-enable-gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+		spi-max-frequency = <1000000>;
+	};
+};
+
+&uart0 {
+	current-speed = <921600>;
+};
+
+/ {
+     aliases {
+             lora0 = &lora0;
+     };
+};
