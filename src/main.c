@@ -53,13 +53,13 @@ int main(void)
 		config.frequency, config.bandwidth, config.datarate);
 
 	while (1) {
-		ret = lora_send(lora_dev, data, MAX_DATA_LEN);
-		if (ret < 0) {
-			LOG_ERR("LoRa send failed");
-			return 0;
-		}
+		// ret = lora_send(lora_dev, data, MAX_DATA_LEN);
+		// if (ret < 0) {
+		// 	LOG_ERR("LoRa send failed");
+		// 	return 0;
+		// }
 
-		LOG_INF("Data sent!");
+		// LOG_INF("Data sent!");
 
 		/* Send data at 1s interval */
 		k_sleep(K_MSEC(1000));
